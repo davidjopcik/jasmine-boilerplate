@@ -1,6 +1,7 @@
 import url from 'node:url'
 import path from 'node:path'
 
+
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
 
 // @ts-expect-error
@@ -23,7 +24,8 @@ export const config: WebdriverIO.Config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './test/specs/**/*.ts'
+        //'./test/specs/**/*.ts'
+        "./test/specs/test.ts"
     ],
     // Patterns to exclude.
     exclude: [
@@ -46,6 +48,9 @@ export const config: WebdriverIO.Config = {
     // from the same test should run tests.
     //
     maxInstances: 10,
+    acceptInsecureCerts: true ,
+
+    
     //
     // ===================
     // Test Configurations
@@ -78,7 +83,7 @@ export const config: WebdriverIO.Config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://the-internet.herokuapp.com',
+    //baseUrl: 'http://the-internet.herokuapp.com',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,

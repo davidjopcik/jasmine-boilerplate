@@ -8,5 +8,6 @@ describe('dynamic loading', function () {
         await DynamicPage.btnStart.click()
         await DynamicPage.loadedPage.waitForExist()
         await expect(DynamicPage.loadedPage).toBePresent()
+        //await browser.debug()
     })
 })
