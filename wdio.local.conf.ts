@@ -8,9 +8,9 @@ export const config: WebdriverIO.Config = {
             browserName: 'chrome',
             acceptInsecureCerts: true,
 
-            /* 'wdio:devtoolsOptions': {
+             'wdio:devtoolsOptions': {
                 //headless: true
-            }, */
+            }, 
 
         }]
     }
